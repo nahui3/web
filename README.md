@@ -2,53 +2,52 @@
 
 Web фронтенд NAHUI
 
-## Требования
+## Быстрый старт
 
-- Node.js версии 18 или выше
-- npm
+### Linux/macOS
 
-## Установка Node.js и npm
-
-Используйте готовые скрипты для автоматической установки:
-
-**Linux/macOS:**
 ```bash
+# Клонируйте репозиторий
+git clone https://github.com/nahui3/web.git
+cd web
+
+# Установка Node.js и npm
 ./install.sh
-```
 
-**Windows:**
-```cmd
-install.bat
-```
-
-## Установка зависимостей проекта
-
-```bash
+# Установка зависимостей проекта
 npm install
-```
 
-## Развертывание
-
-### Режим разработки
-
-```bash
+# Запуск в режиме разработки (приложение будет доступно по адресу http://localhost:5173)
 npm run dev
+
+# Или сборка для production (собранные файлы будут находиться в папке dist/)
+# npm run build
+
+# Или предпросмотр production сборки
+# npm run preview
 ```
 
-Приложение будет доступно по адресу `http://localhost:5173`
+### Windows
 
-### Сборка для production
+```cmd
+REM Клонируйте репозиторий
+git clone https://github.com/nahui3/web.git
+cd web
 
-```bash
-npm run build
-```
+REM Установка Node.js и npm
+install.bat
 
-Собранные файлы будут находиться в папке `dist/`
+REM Установка зависимостей проекта
+npm install
 
-### Предпросмотр production сборки
+REM Запуск в режиме разработки (приложение будет доступно по адресу http://localhost:5173)
+npm run dev
 
-```bash
-npm run preview
+REM Или сборка для production (собранные файлы будут находиться в папке dist/)
+REM npm run build
+
+REM Или предпросмотр production сборки
+REM npm run preview
 ```
 
 Подробная документация находится в папке [docs](./docs/README.md)
