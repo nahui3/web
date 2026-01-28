@@ -1,18 +1,34 @@
 {
-  "name": "web",
-  "version": "1.0.0",
+  "name": "@nahui3/web",
+  "version": "0.1.0",
+  "description": "React-компоненты для проектов NAHUI",
   "type": "module",
-  "scripts": {
-    "dev": "vite --config configs/vite.config.js",
-    "build": "vite build --config configs/vite.config.js",
-    "preview": "vite preview --config configs/vite.config.js"
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup --config configs/tsup.config.ts",
+    "dev": "tsup --config configs/tsup.config.ts --watch",
+    "test": "echo \"no tests yet\"",
+    "lint": "echo \"no lint configured\""
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.0.8"
-  }
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.0"
+  },
+  "license": "MIT"
 }
